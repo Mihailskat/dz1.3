@@ -1,0 +1,4 @@
+df = pd.read_csv('/content/Customers.csv', delimiter=';') # считываем файл
+df.isna().sum() # определяем кол-во пропусков
+df.dropna(inplace=True) # удаляем строки с пропусками, меня исходную таблицу
+df.groupby('Profession')['Income'].mean() # находим средний доход по професиям
